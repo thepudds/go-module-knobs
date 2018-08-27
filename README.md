@@ -8,7 +8,7 @@ Some teams will not want the go tooling to touch the network in CI, whereas othe
 
 This list is an attempt to build a more consolidated enumeration of some of the primary knobs and options that people might use to adapt the default Go behavior to better suite their particular use cases. Most of this information is currently spread throughout different sections of the official [documentation](https://tip.golang.org/cmd/go/#hdr-Modules__module_versions__and_more) or [modules wiki](https://github.com/golang/go/wiki/Modules).
 
-The intent of this list is to help socialize the existence of these knobs, without giving all the details for each. Because different teams will likely want to weave these together in different ways, this document does not prescribe any particular workflow, but it might serve as input while the community starts developing workflows, writing introductory blogs, etc.
+The intent of this list is to help socialize the existence of these knobs, without giving all the details for each. Because different teams will likely want to weave these together in different ways, this document does not prescribe any particular workflow, but it might serve help while the community is starting to develop workflows, write more introductory blogs, etc.
 
 * `GOFLAGS` environment variable
      * Allows you to set a particular go command flag by default.
