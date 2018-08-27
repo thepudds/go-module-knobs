@@ -52,7 +52,7 @@ The current intent of this list is to help socialize the existence of these knob
 * `go mod download` command
      * Most day-to-day use cases do not require this (because normally the go command will automatically download modules as needed).
      * Primarily targeted at pre-warming caches for docker builds or in some cases CI.
-     * Also likely will be used by proxies (e.g., Project Athens or perhaps a simple internally developed proxy) as away to obtain module files on cache miss.
+     * Also likely will be used by proxies (e.g., Project Athens or perhaps a simple internally developed proxy) as a way to obtain module files on cache miss.
      * More details: [tip documentation](https://tip.golang.org/cmd/go/#hdr-Download_modules_to_local_cache)
       
 * `replace` directives in go.mod
