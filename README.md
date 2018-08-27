@@ -1,14 +1,14 @@
 # go-module-knobs
 
-## List of Go module knobs for controlling CI, vendoring, and when go commands access the network
+## List of go module knobs for controlling CI, vendoring, and when go commands access the network
 
 By default, a command like `go build` ignores the vendor directory and will reach out to the network as needed to satisfy imports.
 
-Some teams will not want the go tooling to touch the network in CI, whereas other teams might want greater control over when the go tooling touches the network during day-to-day development activities and how dependencies are obtained.
+Some teams will not want the go tooling to touch the network in CI, whereas other teams might want greater control during day-to-day work regarding when the go tooling updates `go.mod`, how dependencies are obtained, and how vendoring is used.
 
-This is a consolidated list enumerating some of the primary knobs and options that people might use in support of their workflows related to those types of use cases. Most of this information is currently spread throughout different sections of the official documentation.
+This list is an attempt to build a more consolidated enumeration of some of the primary knobs and options that people might use to adapt the default Go behavior to better suite their particular use cases. Most of this information is currently spread throughout different sections of the official [documentation](https://tip.golang.org/cmd/go/#hdr-Modules__module_versions__and_more) or [modules wiki](https://github.com/golang/go/wiki/Modules).
 
-The current intent of this list is to help socialize the existence of these knobs, without giving all the details for each. Given different teams will likely want to weave these together in different ways, this document does not prescribe any particular workflow, but it might serve as input while the community starts developing module workflows, writing blogs, etc.
+The intent of this list is to help socialize the existence of these knobs, without giving all the details for each. Because different teams will likely want to weave these together in different ways, this document does not prescribe any particular workflow, but it might serve as input while the community starts developing workflows, writing introductory blogs, etc.
 
 * `GOFLAGS` environment variable
      * Allows you to set a particular go command flag by default.
