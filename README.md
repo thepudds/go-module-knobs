@@ -15,7 +15,7 @@ The intent of this list is to help socialize the existence of these knobs, witho
      * Can be useful in CI or testing workflows, or if you have an opinion on what the default flags/behavior should be for the go tool for your day-to-day development workflows (e.g., perhaps by opting in to vendoring by setting `GOFLAGS=-mod-vendor` in your .bashrc or to control).
      * More details: [CL](https://go-review.googlesource.com/c/go/+/126656), [tip documentation](https://tip.golang.org/cmd/go/#hdr-Environment_variables)
      
-* `-mod=readonly` flag (e.g., `go build -mod=readonly`, `go test -mod=readonly`)
+* `-mod=readonly` flag (e.g., `go build -mod=readonly`)
      * Prohibits most go commands (except `go get` and `go mod`) from modifying go.mod, causing the command to fail if it would have otherwise implicitly wanted to update go.mod.
      * Can be useful to check that go.mod does not need updates, such as in continuous integration or testing.
      * More details: [tip documentation](https://tip.golang.org/cmd/go/#hdr-Maintaining_module_requirements) and comment [here](https://github.com/golang/go/issues/26850#issuecomment-411903910).
@@ -27,8 +27,8 @@ The intent of this list is to help socialize the existence of these knobs, witho
      * Also supports testing with older versions of Go (e.g., Go 1.9 and 1.10) during CI
      * More details: tip documentation [here](https://tip.golang.org/cmd/go/#hdr-Make_vendored_copy_of_dependencies) and [here](https://tip.golang.org/cmd/go/#hdr-Modules_and_vendoring)
 
-* `-mod=vendor` flag (e.g., `go build -mod=vendor`, `go test -mod=vendor)
-     * By default, a command like go build ignores the vendor directory.
+* `-mod=vendor` flag (e.g., `go build -mod=vendor`)
+     * By default, a command like `go build` ignores the vendor directory.
      * The `-mod=vendor` flag instructs the go commands to use the main module's top-level vendor directory to satisfy dependencies (disabling use of the usual network sources and local caches). The go commands in this mode therefore ignore the dependency descriptions in go.mod and assume that the vendor directory holds the correct copies of dependencies. Note that only the main module's top-level vendor directory is used; vendor directories in other locations are still ignored.
      * Some people will want to always opt-in by setting `GOFLAGS=-mod-vendor` environment variable.
      * More details: tip documentation [here](https://tip.golang.org/cmd/go/#hdr-Modules_and_vendoring) and [here](https://tip.golang.org/cmd/go/#hdr-Maintaining_module_requirements)
