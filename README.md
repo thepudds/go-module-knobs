@@ -30,7 +30,7 @@ The intent of this list is to help socialize the existence of these knobs, witho
 * `-mod=vendor` flag (e.g., `go build -mod=vendor`)
      * By default, a command like `go build` ignores the vendor directory.
      * The `-mod=vendor` flag instructs the go commands to use the main module's top-level vendor directory to satisfy dependencies (disabling use of the usual network sources and local caches). The go commands in this mode therefore ignore the dependency descriptions in go.mod and assume that the vendor directory holds the correct copies of dependencies. Note that only the main module's top-level vendor directory is used; vendor directories in other locations are still ignored.
-     * Some people will want to always opt-in by setting `GOFLAGS=-mod-vendor` environment variable.
+     * Some people will want to always opt-in by setting `GOFLAGS=-mod=vendor` environment variable.
      * More details: tip documentation [here](https://tip.golang.org/cmd/go/#hdr-Modules_and_vendoring) and [here](https://tip.golang.org/cmd/go/#hdr-Maintaining_module_requirements)
    
 * `GO111MODULE=off` environment variable
