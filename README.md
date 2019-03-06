@@ -12,7 +12,7 @@ The intent of this list is to help socialize the existence of these knobs, witho
 
 * `GOFLAGS` environment variable
      * Allows you to set a particular go command flag by default.
-     * Can be useful in CI or testing workflows, or if you have an opinion on what the default flags/behavior should be for the go tool for your day-to-day development workflows (e.g., perhaps by opting in to vendoring by setting `GOFLAGS=-mod-vendor` in your .bashrc or to control).
+     * Can be useful in CI or testing workflows, or if you have an opinion on what the default flags/behavior should be for the go tool for your day-to-day development workflows (e.g., perhaps by opting in to vendoring by setting `GOFLAGS=-mod=vendor` in your .bashrc or to control).
      * More details: [CL](https://go-review.googlesource.com/c/go/+/126656), [tip documentation](https://tip.golang.org/cmd/go/#hdr-Environment_variables)
      
 * `-mod=readonly` flag (e.g., `go build -mod=readonly`)
